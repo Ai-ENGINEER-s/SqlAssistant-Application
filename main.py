@@ -10,6 +10,7 @@ from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
 import sqlalchemy.exc
 
+
 # Fonction pour initialiser la base de données en fonction du type
 def init_database(db_type: str, user: str, password: str, host: str, port: str, database: str) -> SQLDatabase:
     try:

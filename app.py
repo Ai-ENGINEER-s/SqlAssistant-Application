@@ -152,7 +152,7 @@ def show_login_page():
     if login_button:
         if login(email, password):
             st.session_state.logged_in = True
-            st.experimental_rerun()
+            st.experimental_run()
         else:
             st.error("Identifiants incorrects. Veuillez réessayer.")
 
@@ -251,7 +251,7 @@ def show_main_page():
     logout_button = st.button("Se déconnecter")
     if logout_button:
         st.session_state.logged_in = False
-        st.experimental_rerun()
+        st.experimental_run()
 
 if st.session_state.logged_in:
     show_main_page()
