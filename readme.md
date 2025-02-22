@@ -1,73 +1,93 @@
-# MySQL Python Chatbot with GPT-4 and Mistral AI
 
-Welcome to the GitHub repository for our tutorial on building a natural language SQL chatbot using GPT-4! This project guides you through the development of a chatbot that can interpret natural language queries, generate SQL queries, and fetch results from a SQL database, all in an intuitive and user-friendly way. It utilizes the power of OpenAI's GPT-4 model, integrated with a Streamlit GUI for an enhanced interaction experience.
+```markdown
+# DIGITAR Database Assistant 🤖
 
-🟡 This repository serves as supporting material for the [YouTube video tutorial](https://youtu.be/YqqRkuizNN4).
-
-## Features
-- **Natural Language Processing**: Uses GPT-4 to interpret and respond to user queries in natural language.
-- **SQL Query Generation**: Dynamically generates SQL queries based on the user's natural language input.
-- **Database Interaction**: Connects to a SQL database to retrieve query results, demonstrating practical database interaction.
-- **Streamlit GUI**: Features a user-friendly interface built with Streamlit, making it easy for users of all skill levels.
-- **Python-based**: Entirely coded in Python, showcasing best practices in software development with modern technologies.
-
-## Brief Explanation of How the Chatbot Works
-
-The chatbot works by taking a user's natural language query, converting it into a SQL query using GPT-4, executing the query on a SQL database, and then presenting the results back to the user in natural language. This process involves several steps of data processing and interaction with the OpenAI API and a SQL database, all seamlessly integrated into a Streamlit application.
-
-Consider the following diagram to understand how the different chains and components are built:
-
-![Chatbot Architecture](./docs/mysql-chains.png)
-
-For a more detailed explanation and a step-by-step guide, refer this other video: [YouTube video tutorial](https://youtu.be/9ccl1_Wu24Q).
-
-For a more detailed explanation and a step-by-step guide, refer to the [YouTube video tutorial](Chat with MySQL Database with Python | LangChain Tutorial).
-
-## Installation
-Ensure you have Python installed on your machine. Then clone this repository:
-
-```bash
-git clone [repository-link]
-cd [repository-directory]
-```
-
-Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-Create your own .env file with the necessary variables, including your OpenAI API key:
-
-```bash
-OPENAI_API_KEY=[your-openai-api-key]
-```
-
-## Usage
-To launch the Streamlit app and interact with the chatbot:
-
-```bash
-streamlit run app.py
-```
-
-## Contributing
-As this repository accompanies the [YouTube video tutorial](https://youtu.be/YqqRkuizNN4), we are primarily focused on providing a comprehensive learning experience. Contributions for bug fixes or typos are welcome.
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+**DIGITAR Database Assistant** est une application web interactive qui vous permet d'interagir avec vos bases de données SQL en utilisant des modèles de langage naturel (LLM). Posez des questions en langage naturel, et l'assistant génère et exécute les requêtes SQL correspondantes pour vous fournir des réponses claires et précises.
 
 ---
 
-**Note**: This project is intended for educational and research purposes. Please ensure compliance with the terms of use and guidelines of any APIs or services used.
+## Fonctionnalités principales 🚀
+
+- **Connexion à plusieurs types de bases de données** : MySQL, PostgreSQL, SQL Server.
+- **Génération de requêtes SQL** : L'assistant génère des requêtes SQL en fonction de vos questions en langage naturel.
+- **Historique de conversation** : Conservez un historique des questions et réponses pour une meilleure continuité.
+- **Support de plusieurs modèles LLM** : Intégration avec OpenAI (GPT-4, GPT-3.5) et Groq (Llama2, Mixtral).
+- **Interface utilisateur intuitive** : Une interface Streamlit moderne et réactive pour une expérience utilisateur optimale.
+- **Sécurité** : Authentification requise pour accéder à l'application.
 
 ---
 
-We hope this repository aids in your exploration of integrating AI with web technologies. For more informative tutorials, be sure to check out [Your YouTube Channel].
+## Comment utiliser l'application 🛠️
 
-Happy Coding! 🚀👨‍💻🤖
+### 1. Connexion à l'application
+- Accédez à la page de connexion.
+- Entrez les identifiants suivants :
+  - **Nom d'utilisateur** : `admin`
+  - **Mot de passe** : `aze123`
+
+### 2. Configuration de la base de données
+- Dans le panneau latéral, configurez les paramètres de connexion à votre base de données :
+  - Type de base de données (MySQL, PostgreSQL, SQL Server).
+  - Hôte, port, nom d'utilisateur, mot de passe et nom de la base de données.
+- Cliquez sur **"Se connecter à la BD"** pour établir la connexion.
+
+### 3. Configuration du modèle IA
+- Sélectionnez le fournisseur de modèle (OpenAI ou Groq).
+- Choisissez le modèle spécifique (par exemple, GPT-4, Llama2).
+- Entrez votre clé API pour le service sélectionné.
+
+### 4. Posez vos questions
+- Dans l'onglet **"💬 Assistant SQL"**, posez vos questions en langage naturel.
+- L'assistant générera et exécutera la requête SQL correspondante, puis affichera les résultats.
+
+### 5. Exemples de questions
+- "Quels sont les 5 artistes les plus populaires ?"
+- "Montrez-moi le nombre total de ventes par région."
+- "Quelle est la moyenne des prix des produits par catégorie ?"
+- "Listez les clients qui ont passé plus de 3 commandes."
 
 ---
 
-*If you find this project helpful, please consider giving it a star!*
+## Prérequis 📋
+
+- **Python 3.8 ou supérieur**
+- **Streamlit** : `pip install streamlit`
+- **LangChain** : `pip install langchain`
+- **SQLAlchemy** : `pip install sqlalchemy`
+- **dotenv** : `pip install python-dotenv`
+- **Autres dépendances** : `pip install langchain-openai langchain-groq mysql-connector-python psycopg2 pyodbc`
 
 ---
+
+## Installation et exécution 🚀
+
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/votre-utilisateur/digitar-database-assistant.git
+   cd digitar-database-assistant
+   ```
+
+2. Installez les dépendances :
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Lancez l'application :
+   ```bash
+   streamlit run app.py
+   ```
+
+4. Accédez à l'application dans votre navigateur à l'adresse :
+   ```
+   http://localhost:8501
+   ```
+
+---
+
+
+## Auteur 👤
+
+- **BARRY SANOUSSA**
+- Site web : [https://digitar.tech](https://digitar.tech)
+```
+

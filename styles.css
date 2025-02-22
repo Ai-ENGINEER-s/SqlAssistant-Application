@@ -1,0 +1,397 @@
+/* Variables de couleur */
+:root {
+    --primary: #2E7DFF;
+    --primary-dark: #1A56B8;
+    --secondary: #6C757D;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --background: #f7f9fc;
+    --help-background: #ffffff;
+    --help-border: #2E7DFF;
+    --help-text: #333333;
+    --chat-bg: #e5ddd5;
+    --input-bg: #f0f2f5;
+}
+
+/* Style général */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.main {
+    background-color: var(--chat-bg);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Structure principale de chat */
+.chat-interface {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--background);
+}
+
+/* Zone de messages */
+.chat-messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--chat-bg);
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Container pour la conversation - limiter largeur */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Message row pour l'alignement */
+.message-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.ai-message-row {
+    justify-content: flex-start;
+}
+
+.human-message-row {
+    justify-content: flex-end;
+}
+
+/* Chat messages - style commun */
+.ai-message, .human-message {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    max-width: 65%;
+    width: auto;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+    position: relative;
+    word-wrap: break-word;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* Message AI */
+.ai-message {
+    background-color: #ffffff;
+    color: #303030;
+    align-self: flex-start;
+    border-top-left-radius: 2px;
+}
+
+/* Message humain */
+.human-message {
+    background-color: #dcf8c6;
+    color: #303030;
+    align-self: flex-end;
+    border-top-right-radius: 2px;
+}
+
+/* Animation pour les nouveaux messages */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Zone de saisie fixée en bas */
+.chat-input-container {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f0f2f5;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Style d'input inspiré de WhatsApp */
+.chat-input {
+    flex: 1;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 16px;
+    font-size: 15px;
+    outline: none;
+    margin-right: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.send-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.send-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Titre principal */
+h1 {
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Sous-titres */
+h3 {
+    color: var(--dark);
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Header de chat */
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #f0f2f5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.chat-header-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 15px;
+    color: var(--dark);
+}
+
+.chat-header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Cartes */
+.css-1r6slb0 {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    padding: 1rem;
+}
+
+/* Boutons */
+.stButton button {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.primary-btn {
+    background-color: var(--primary);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.secondary-btn {
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* Section Aide */
+.help-section {
+    background-color: var(--help-background);
+    border: 2px solid var(--help-border);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    color: var(--help-text);
+}
+
+/* Animation de chargement */
+.loading-animation {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 13px;
+}
+
+/* Page de connexion */
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-logo {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.footer-credit {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--secondary);
+    margin-top: 2rem;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-top: 0;
+}
+
+.connection-status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-connected {
+    background-color: #e6f7ec;
+    color: #198754;
+}
+
+.status-disconnected {
+    background-color: #f8d7da;
+    color: #dc3545;
+}
+
+/* Formulaires */
+.form-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Onglets */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 1rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 45px;
+    white-space: pre-wrap;
+    border-radius: 6px 6px 0 0;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+/* Temps des messages */
+.message-time {
+    font-size: 0.7rem;
+    color: #667781;
+    text-align: right;
+    margin-top: 4px;
+    user-select: none;
+}
+
+/* Style pour les avatars */
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Indicateur de lecture pour les messages */
+.read-indicator {
+    font-size: 0.7rem;
+    color: #53bdeb;
+    margin-left: 5px;
+}
+
+/* Pour les appareils mobiles */
+@media (max-width: 768px) {
+    .ai-message, .human-message {
+        max-width: 80%;
+    }
+}
+
+/* Navbar fixe */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Contenu principal */
+.main-content {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}

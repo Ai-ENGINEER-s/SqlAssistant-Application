@@ -1,0 +1,5 @@
+password :1lAlZ1PMeJvtQ6LgIj8RZ7EFD9yl3gB2
+port : 5432
+dbName :shop_q2u4
+userName :shop_q2u4_user
+external_db_url = postgresql://shop_q2u4_user:1lAlZ1PMeJvtQ6LgIj8RZ7EFD9yl3gB2@dpg-cusesbfnoe9s738uhjkg-a.oregon-postgres.render.com/shop_q2u4
