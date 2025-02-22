@@ -15,6 +15,12 @@
 
 ---
 
+## Screenshot 🖼️
+
+![Database Assistant Screenshot](applicationScreeShot.png)
+
+---
+
 ## How to Use the Application 🛠️
 
 ### 1. Log in to the Application
