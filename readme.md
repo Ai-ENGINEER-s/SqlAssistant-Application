@@ -26,8 +26,8 @@
 ### 1. Log in to the Application
 - Go to the login page.
 - Enter the following credentials:
-  - **Username**: `admin`
-  - **Password**: `aze123`
+  - **Username**: `your_username`
+  - **Password**: `your_password`
 
 ### 2. Configure the Database
 - In the sidebar, configure your database connection settings:
