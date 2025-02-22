@@ -13,7 +13,7 @@ import time
 
 # Configuration de la page et des styles globaux
 st.set_page_config(
-    page_title="DIGITAR Database Assistant",
+    page_title=" Database Assistant",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -197,7 +197,7 @@ def show_login_page():
                     else:
                         st.error("Identifiants incorrects. Veuillez réessayer.")
         
-        st.markdown('<div class="footer-credit">© 2025 DIGITAR - Tous droits réservés</div>', unsafe_allow_html=True)
+        st.markdown('<div class="footer-credit">© 2025 BARRY - Tous droits réservés</div>', unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
 def show_main_page():
@@ -314,7 +314,7 @@ def show_main_page():
                 st.rerun()
 
     # Zone principale
-    st.markdown('<h1><span style="color:#2E7DFF">DIGITAR</span> Database Assistant</h1>', unsafe_allow_html=True)
+    st.markdown('<h1><span style="color:#2E7DFF"></span> Database Assistant</h1>', unsafe_allow_html=True)
     
     # Onglets principaux
     tab1, tab3 = st.tabs(["💬 Assistant SQL", "ℹ️ Aide"])
@@ -388,8 +388,8 @@ def show_main_page():
             <h4>📞 Support</h4>
             <p>Si vous rencontrez des problèmes ou avez des questions, contactez le support technique:</p>
             <ul>
-                <li>Email: support@digitar.tech</li>
-                <li>Téléphone: +33 (0)1 23 45 67 89</li>
+                <li>Email: s.barry@mundiapolis.ma</li>
+                <li>Téléphone: +212777730540</li>
                 <li>Horaires: Du lundi au vendredi, 9h00 - 18h00</li>
             </ul>
         </div>
