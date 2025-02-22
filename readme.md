@@ -1,8 +1,8 @@
 
 ```markdown
-# DIGITAR Database Assistant 🤖
+#  Database Assistant 🤖
 
-**DIGITAR Database Assistant** est une application web interactive qui vous permet d'interagir avec vos bases de données SQL en utilisant des modèles de langage naturel (LLM). Posez des questions en langage naturel, et l'assistant génère et exécute les requêtes SQL correspondantes pour vous fournir des réponses claires et précises.
+**Database Assistant** est une application web interactive qui vous permet d'interagir avec vos bases de données SQL en utilisant des modèles de langage naturel (LLM). Posez des questions en langage naturel, et l'assistant génère et exécute les requêtes SQL correspondantes pour vous fournir des réponses claires et précises.
 
 ---
 
@@ -88,6 +88,6 @@
 ## Auteur 👤
 
 - **BARRY SANOUSSA**
-- Site web : [https://digitar.tech](https://digitar.tech)
+- [BARRY](https://sanoussabarry.com/)
 ```
 
