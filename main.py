@@ -171,7 +171,7 @@ def show_login_page():
         st.markdown('''
         <div class="login-header">
             <div class="login-logo">🤖</div>
-            <h1>DIGITAR Database Assistant</h1>
+            <h1>Database Assistant</h1>
             <p>Connectez-vous pour accéder à votre assistant IA de bases de données</p>
         </div>
         ''', unsafe_allow_html=True)
