@@ -1,15 +1,5 @@
 import streamlit as st
-import urllib.parse
-from dotenv import load_dotenv
-from langchain_core.messages import AIMessage, HumanMessage
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.runnables import RunnablePassthrough
-from langchain_community.utilities import SQLDatabase
-from langchain_core.output_parsers import StrOutputParser
-from langchain_openai import ChatOpenAI
-from langchain_groq import ChatGroq
-import sqlalchemy.exc
-import time
+from langchain_core.messages import AIMessage
 from utils.ui import show_login_page , show_main_page
 
 # Configuration de la page et des styles globaux
@@ -49,9 +39,6 @@ def login(username, password):
     if username == "admin" and password == "aze123":
         return True
     return False
-
-
-
 
 # Logique principale de l'application
 if st.session_state.logged_in:
