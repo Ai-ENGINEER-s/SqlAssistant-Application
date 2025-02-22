@@ -1,93 +1,85 @@
-
-```markdown
 #  Database Assistant 🤖
 
-**Database Assistant** est une application web interactive qui vous permet d'interagir avec vos bases de données SQL en utilisant des modèles de langage naturel (LLM). Posez des questions en langage naturel, et l'assistant génère et exécute les requêtes SQL correspondantes pour vous fournir des réponses claires et précises.
+**Database Assistant** is an interactive web application that allows you to interact with your SQL databases using natural language models (LLM). Ask questions in natural language, and the assistant will generate and execute the corresponding SQL queries to provide you with clear and precise answers.
 
 ---
 
-## Fonctionnalités principales 🚀
+## Main Features 🚀
 
-- **Connexion à plusieurs types de bases de données** : MySQL, PostgreSQL, SQL Server.
-- **Génération de requêtes SQL** : L'assistant génère des requêtes SQL en fonction de vos questions en langage naturel.
-- **Historique de conversation** : Conservez un historique des questions et réponses pour une meilleure continuité.
-- **Support de plusieurs modèles LLM** : Intégration avec OpenAI (GPT-4, GPT-3.5) et Groq (Llama2, Mixtral).
-- **Interface utilisateur intuitive** : Une interface Streamlit moderne et réactive pour une expérience utilisateur optimale.
-- **Sécurité** : Authentification requise pour accéder à l'application.
-
----
-
-## Comment utiliser l'application 🛠️
-
-### 1. Connexion à l'application
-- Accédez à la page de connexion.
-- Entrez les identifiants suivants :
-  - **Nom d'utilisateur** : `admin`
-  - **Mot de passe** : `aze123`
-
-### 2. Configuration de la base de données
-- Dans le panneau latéral, configurez les paramètres de connexion à votre base de données :
-  - Type de base de données (MySQL, PostgreSQL, SQL Server).
-  - Hôte, port, nom d'utilisateur, mot de passe et nom de la base de données.
-- Cliquez sur **"Se connecter à la BD"** pour établir la connexion.
-
-### 3. Configuration du modèle IA
-- Sélectionnez le fournisseur de modèle (OpenAI ou Groq).
-- Choisissez le modèle spécifique (par exemple, GPT-4, Llama2).
-- Entrez votre clé API pour le service sélectionné.
-
-### 4. Posez vos questions
-- Dans l'onglet **"💬 Assistant SQL"**, posez vos questions en langage naturel.
-- L'assistant générera et exécutera la requête SQL correspondante, puis affichera les résultats.
-
-### 5. Exemples de questions
-- "Quels sont les 5 artistes les plus populaires ?"
-- "Montrez-moi le nombre total de ventes par région."
-- "Quelle est la moyenne des prix des produits par catégorie ?"
-- "Listez les clients qui ont passé plus de 3 commandes."
+- **Connect to multiple database types**: MySQL, PostgreSQL, SQL Server.
+- **SQL Query Generation**: The assistant generates SQL queries based on your natural language questions.
+- **Conversation History**: Keep a history of questions and answers for better continuity.
+- **Support for multiple LLM models**: Integration with OpenAI (GPT-4, GPT-3.5) and Groq (Llama2, Mixtral).
+- **Intuitive User Interface**: A modern and responsive Streamlit interface for an optimal user experience.
+- **Security**: Authentication is required to access the application.
 
 ---
 
-## Prérequis 📋
+## How to Use the Application 🛠️
 
-- **Python 3.8 ou supérieur**
-- **Streamlit** : `pip install streamlit`
-- **LangChain** : `pip install langchain`
-- **SQLAlchemy** : `pip install sqlalchemy`
-- **dotenv** : `pip install python-dotenv`
-- **Autres dépendances** : `pip install langchain-openai langchain-groq mysql-connector-python psycopg2 pyodbc`
+### 1. Log in to the Application
+- Go to the login page.
+- Enter the following credentials:
+  - **Username**: `admin`
+  - **Password**: `aze123`
+
+### 2. Configure the Database
+- In the sidebar, configure your database connection settings:
+  - Database type (MySQL, PostgreSQL, SQL Server).
+  - Host, port, username, password, and database name.
+- Click **"Connect to DB"** to establish the connection.
+
+### 3. Configure the AI Model
+- Select the model provider (OpenAI or Groq).
+- Choose the specific model (e.g., GPT-4, Llama2).
+- Enter your API key for the selected service.
+
+### 4. Ask Your Questions
+- In the **"💬 SQL Assistant"** tab, ask your questions in natural language.
+- The assistant will generate and execute the corresponding SQL query and display the results.
+
+### 5. Example Questions
+- "What are the top 5 most popular artists?"
+- "Show me the total sales by region."
+- "What is the average price of products by category?"
+- "List customers who have placed more than 3 orders."
 
 ---
 
-## Installation et exécution 🚀
+## Prerequisites 📋
 
-1. Clonez le dépôt :
+- **Python 3.8 or higher**
+- **`requirements.txt` file** containing all necessary dependencies.
+
+---
+
+## Installation and Execution 🚀
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/votre-utilisateur/digitar-database-assistant.git
+   git clone https://github.com/your-user/digitar-database-assistant.git
    cd digitar-database-assistant
    ```
 
-2. Installez les dépendances :
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Lancez l'application :
+3. Run the application:
    ```bash
    streamlit run app.py
    ```
 
-4. Accédez à l'application dans votre navigateur à l'adresse :
+4. Access the application in your browser at:
    ```
    http://localhost:8501
    ```
 
 ---
 
-
-## Auteur 👤
+## Author 👤
 
 - **BARRY SANOUSSA**
-- [BARRY](https://sanoussabarry.com/)
-```
+- [BARRY Website](https://sanoussabarry.com/)
 
